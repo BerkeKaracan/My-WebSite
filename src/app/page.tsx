@@ -54,8 +54,9 @@ export default function Home() {
                   <span>Istanbul, Turkey</span>
                 </a>
                 <a
-                  href="mailto:john.doe@example.com"
+                  href="mailto:berkekaracan1113@gmail.com"
                   className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
@@ -73,8 +74,9 @@ export default function Home() {
                   <span>berkekaracan1113@gmail.com</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/BerkeKaracan"
                   className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
@@ -89,7 +91,9 @@ export default function Home() {
                       d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
                     />
                   </svg>
-                  <span>https://github.com/BerkeKaracan</span>
+                  <span rel="noopener noreferrer">
+                    https://github.com/BerkeKaracan
+                  </span>
                 </a>
               </div>
 
@@ -163,13 +167,14 @@ export default function Home() {
             </h3>
             <div className="flex flex-col gap-4 text-sm text-zinc-400 leading-relaxed font-light text-justify">
               <p>
-                I am a detail-oriented software engineer with over 4 years of
-                professional experience in designing, developing, and deploying
-                scalable web applications. My primary expertise lies in bridging
-                the gap between high-performance backend systems and intuitive,
-                modern frontend interfaces. I thrive in environments that demand
-                robust architectural decisions and clean, maintainable
-                codebases.
+                About I am a Full-Stack Developer focused on building scalable,
+                high-performance web applications. I bridge the gap between
+                modern frontend interfaces and robust, heavy-duty backend
+                architectures. My engineering approach is direct: writing clean,
+                maintainable code and architecting systems that perform
+                flawlessly under the hood. From designing secure REST APIs to
+                developing pixel-perfect UIs, I build end-to-end solutions that
+                scale.
               </p>
               <p>
                 Currently, I specialize in the modern web stack, utilizing
@@ -188,7 +193,7 @@ export default function Home() {
           {/* Projects Section */}
           <GlassCard className="group">
             <h3 className="text-lg font-semibold mb-6 text-zinc-100 tracking-wide flex items-center gap-3">
-              <span className="w-8 h-[1px] bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
+              <span className="w-8 h-px bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
               FEATURED PROJECTS
             </h3>
 
@@ -203,7 +208,7 @@ export default function Home() {
                         href="/projects/fintech-dashboard-api"
                         className="before:absolute before:inset-0 before:z-10"
                       >
-                        FinTech Dashboard API
+                        E-Commerce Project (MARKET)
                       </Link>
                     </h4>
                     <p className="text-xs text-zinc-500 mt-1 uppercase tracking-wider font-medium">
@@ -212,7 +217,7 @@ export default function Home() {
                   </div>
                   <div className="flex gap-3 text-zinc-500 relative z-20">
                     <a
-                      href="https://github.com"
+                      href="https://github.com/BerkeKaracan/E-CommerceProject"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-white transition-colors"
@@ -233,10 +238,9 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-light">
-                  Engineered a high-throughput RESTful API for a financial
-                  dashboard using FastAPI and PostgreSQL. Implemented JWT
-                  authentication, role-based access control (RBAC), and complex
-                  data aggregation pipelines.
+                  A feature-rich, high-performance Full-Stack modern e-commerce
+                  platform built to demonstrate advanced web development, secure
+                  backend architecture, and perfect web vitals.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-5 relative z-20">
                   <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
