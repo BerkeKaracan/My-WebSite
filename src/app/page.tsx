@@ -1,5 +1,6 @@
 import GlassCard from "@/components/GlassCard";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -7,14 +8,17 @@ export default function Home() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* LEFT COLUMN: Comprehensive Profile (Sticky) */}
         <aside className="w-full md:w-1/3 md:shrink-0">
-          <div className="sticky top-12 flex flex-col gap-6">
+          <div className="md:sticky md:top-12 flex flex-col gap-6">
             <GlassCard>
               {/* Header: Photo & Title */}
               <div className="flex flex-col items-center gap-5">
-                <div className="w-36 h-36 rounded-2xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105 grayscale hover:grayscale-0">
-                  <span className="text-xs font-medium tracking-widest text-zinc-500">
-                    PHOTO
-                  </span>
+                <div className="relative w-36 h-36 rounded-2xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105 grayscale hover:grayscale-0">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Berke Karacan"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="text-center">
                   <h1 className="text-3xl font-bold tracking-tight bg-linear-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text text-transparent pb-1">
@@ -28,10 +32,7 @@ export default function Home() {
 
               {/* Contact Info */}
               <div className="mt-8 pt-6 border-t border-zinc-800/50 flex flex-col gap-4 text-sm text-zinc-400">
-                <a
-                  href="#"
-                  className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
-                >
+                <div className="flex items-center gap-3 group cursor-default">
                   <svg
                     className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
                     fill="none"
@@ -52,11 +53,10 @@ export default function Home() {
                     />
                   </svg>
                   <span>Istanbul, Turkey</span>
-                </a>
+                </div>
                 <a
                   href="mailto:berkekaracan1113@gmail.com"
                   className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
-                  rel="noopener noreferrer"
                 >
                   <svg
                     className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
@@ -75,8 +75,9 @@ export default function Home() {
                 </a>
                 <a
                   href="https://github.com/BerkeKaracan"
-                  className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
+                  target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
                 >
                   <svg
                     className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
@@ -91,16 +92,14 @@ export default function Home() {
                       d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
                     />
                   </svg>
-                  <span rel="noopener noreferrer">
-                    https://github.com/BerkeKaracan
-                  </span>
+                  <span>github.com/BerkeKaracan</span>
                 </a>
               </div>
 
               {/* Core Technologies */}
               <div className="mt-8 pt-6 border-t border-zinc-800/50">
                 <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-100 uppercase">
-                  Core Technologies
+                  Languages & Core
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -123,13 +122,32 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Tools & Design (ADDED FROM SKETCH) */}
+              <div className="mt-6 pt-6 border-t border-zinc-800/50">
+                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-100 uppercase">
+                  Tools / Design
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Figma", "Git / GitHub", "Cursor"].map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-3 py-1.5 text-xs font-medium bg-zinc-900/80 border border-zinc-800 hover:border-zinc-600 rounded-md text-zinc-300 transition-colors cursor-default"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               {/* Education & Languages */}
-              <div className="mt-8 pt-6 border-t border-zinc-800/50">
+              <div className="mt-6 pt-6 border-t border-zinc-800/50 hidden md:block">
                 <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-100 uppercase">
                   Education
                 </h3>
                 <div className="mb-4 group cursor-default">
-                  <p className="text-sm font-medium text-zinc-200 group-hover:text-white transition-colors"></p>
+                  <p className="text-sm font-medium text-zinc-200 group-hover:text-white transition-colors">
+                    Web Design & Coding
+                  </p>
                   <p className="text-xs text-zinc-500 mt-1">
                     Istanbul University • 2025 - 2027
                   </p>
@@ -140,13 +158,13 @@ export default function Home() {
                 </h3>
                 <div className="flex flex-col gap-2 text-sm text-zinc-400">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium text-zinc-300">English</span>{" "}
+                    <span className="font-medium text-zinc-300">English</span>
                     <span className="text-xs bg-zinc-800 px-2 py-1 rounded text-zinc-400">
-                      Fluent
+                      Proficient
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="font-medium text-zinc-300">Turkish</span>{" "}
+                    <span className="font-medium text-zinc-300">Turkish</span>
                     <span className="text-xs bg-zinc-800 px-2 py-1 rounded text-zinc-400">
                       Native
                     </span>
@@ -159,15 +177,15 @@ export default function Home() {
 
         {/* RIGHT COLUMN: Detailed Content (Scrollable) */}
         <main className="w-full md:w-2/3 flex flex-col gap-8">
-          {/* Long Summary Section */}
-          <GlassCard className="group">
+          {/* Executive Summary Section */}
+          <GlassCard className="group transition-all duration-500 hover:border-zinc-700/50">
             <h3 className="text-lg font-semibold mb-6 text-zinc-100 tracking-wide flex items-center gap-3">
               <span className="w-8 h-px bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
-              EXECUTIVE SUMMARY
+              SUMMARY
             </h3>
             <div className="flex flex-col gap-4 text-sm text-zinc-400 leading-relaxed font-light text-justify">
               <p>
-                About I am a Full-Stack Developer focused on building scalable,
+                I am a Full-Stack Developer focused on building scalable,
                 high-performance web applications. I bridge the gap between
                 modern frontend interfaces and robust, heavy-duty backend
                 architectures. My engineering approach is direct: writing clean,
@@ -203,9 +221,8 @@ export default function Home() {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h4 className="text-base font-semibold text-zinc-100 group-hover/card:text-white transition-colors">
-                      {/* Invisible stretched link covering the entire card */}
                       <Link
-                        href="/projects/fintech-dashboard-api"
+                        href="/projects/e-commerce-project"
                         className="before:absolute before:inset-0 before:z-10"
                       >
                         E-Commerce Project (MARKET)
@@ -237,7 +254,7 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-light">
+                <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none">
                   A feature-rich, high-performance Full-Stack modern e-commerce
                   platform built to demonstrate advanced web development, secure
                   backend architecture, and perfect web vitals.
@@ -257,7 +274,6 @@ export default function Home() {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h4 className="text-base font-semibold text-zinc-100 group-hover/card:text-white transition-colors">
-                      {/* Invisible stretched link covering the entire card */}
                       <Link
                         href="/projects/devconnect-platform"
                         className="before:absolute before:inset-0 before:z-10"
@@ -289,34 +305,12 @@ export default function Home() {
                         />
                       </svg>
                     </a>
-                    <a
-                      href="https://demo.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition-colors"
-                      title="Live Demo"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </a>
                   </div>
                 </div>
                 <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none">
                   Designed and developed a real-time collaboration platform for
                   developers. Built a responsive, accessible UI using Next.js
-                  and Tailwind CSS. The backend utilizes FastAPI with
-                  Server-Sent Events (SSE) for real-time notifications.
+                  and Tailwind CSS. The backend utilizes FastAPI.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-5 relative z-20">
                   <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
@@ -325,10 +319,38 @@ export default function Home() {
                   <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
                     Tailwind CSS
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
-                    FastAPI
-                  </span>
                 </div>
+              </div>
+            </div>
+          </GlassCard>
+
+          {/* CERTIFICATIONS SECTION (ADDED FROM SKETCH) */}
+          <GlassCard className="group transition-all duration-500 hover:border-zinc-700/50">
+            <h3 className="text-lg font-semibold mb-6 text-zinc-100 tracking-wide flex items-center gap-3">
+              <span className="w-8 h-px bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
+              CERTIFICATIONS
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl border border-zinc-800/50 bg-zinc-900/20 hover:bg-zinc-800/40 transition-colors">
+                <a
+                  href="/Software_Development_Tools_Certificate.pdf"
+                  target="_blank"
+                >
+                  <p className="text-sm font-semibold text-zinc-200">
+                    Software Development Tools
+                  </p>
+                  <p className="text-[11px] text-zinc-500 uppercase mt-1 tracking-wider font-mono">
+                    BTK ACADEMY • 2026
+                  </p>
+                </a>
+              </div>
+              <div className="p-4 rounded-xl border border-zinc-800/50 bg-zinc-900/20 hover:bg-zinc-800/40 transition-colors">
+                <p className="text-sm font-semibold text-zinc-200">
+                  Advanced React Patterns
+                </p>
+                <p className="text-[11px] text-zinc-500 uppercase mt-1 tracking-wider font-mono">
+                  Frontend Masters • 2023
+                </p>
               </div>
             </div>
           </GlassCard>
