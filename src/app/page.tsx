@@ -275,7 +275,7 @@ export default function Home() {
                   <div>
                     <h4 className="text-base font-semibold text-zinc-100 group-hover/card:text-white transition-colors">
                       <Link
-                        href="/projects/devconnect-platform"
+                        href="/projects/dev-connect-platform"
                         className="before:absolute before:inset-0 before:z-10"
                       >
                         DevConnect Platform
