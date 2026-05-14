@@ -1,17 +1,13 @@
-import React from "react";
-
-interface GlassCardProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
 export default function GlassCard({
   children,
   className = "",
-}: GlassCardProps) {
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <div
-      className={`bg-zinc-900/60 backdrop-blur-xl border border-zinc-800 rounded-xl shadow-2xl p-6 md:p-8 ${className}`}
+      className={`p-8 rounded-3xl border border-zinc-200/50 dark:border-zinc-800/50 bg-white/50 dark:bg-zinc-900/30 backdrop-blur-xl shadow-xl dark:shadow-2xl ${className}`}
     >
       {children}
     </div>

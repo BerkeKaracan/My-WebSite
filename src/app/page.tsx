@@ -1,10 +1,12 @@
 import GlassCard from "@/components/GlassCard";
 import Link from "next/link";
 import Image from "next/image";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-6 md:p-12 lg:p-24 bg-zinc-950 text-zinc-300 font-sans selection:bg-zinc-700 selection:text-white">
+    <main className="min-h-screen p-6 md:p-12 lg:p-24 bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 font-sans selection:bg-zinc-700 selection:text-white transition-colors duration-300">
+      <ThemeToggle />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         {/* LEFT COLUMN: Comprehensive Profile (Sticky) */}
         <aside className="w-full md:w-1/3 md:shrink-0">
@@ -12,7 +14,7 @@ export default function Home() {
             <GlassCard>
               {/* Header: Photo & Title */}
               <div className="flex flex-col items-center gap-5">
-                <div className="relative w-36 h-36 rounded-2xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105 grayscale hover:grayscale-0">
+                <div className="relative w-36 h-36 rounded-2xl bg-zinc-200 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700/50 flex items-center justify-center overflow-hidden shadow-xl dark:shadow-2xl transition-all duration-500 hover:scale-105 grayscale hover:grayscale-0">
                   <Image
                     src="/profile.jpg"
                     alt="Berke Karacan"
@@ -21,20 +23,20 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-center">
-                  <h1 className="text-3xl font-bold tracking-tight bg-linear-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text text-transparent pb-1">
+                  <h1 className="text-3xl font-bold tracking-tight bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-500 dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-500 bg-clip-text text-transparent pb-1">
                     Berke Karacan
                   </h1>
-                  <h2 className="text-sm text-zinc-400 mt-1 uppercase tracking-[0.2em] font-medium">
+                  <h2 className="text-sm text-zinc-500 dark:text-zinc-400 mt-1 uppercase tracking-[0.2em] font-medium">
                     Full Stack Developer
                   </h2>
                 </div>
               </div>
 
               {/* Contact Info */}
-              <div className="mt-8 pt-6 border-t border-zinc-800/50 flex flex-col gap-4 text-sm text-zinc-400">
+              <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800/50 flex flex-col gap-4 text-sm text-zinc-600 dark:text-zinc-400">
                 <div className="flex items-center gap-3 group cursor-default">
                   <svg
-                    className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
+                    className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -56,10 +58,10 @@ export default function Home() {
                 </div>
                 <a
                   href="mailto:berkekaracan1113@gmail.com"
-                  className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
+                  className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-100 transition-colors group"
                 >
                   <svg
-                    className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
+                    className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -77,10 +79,10 @@ export default function Home() {
                   href="https://github.com/BerkeKaracan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-zinc-100 transition-colors group"
+                  className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-100 transition-colors group"
                 >
                   <svg
-                    className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors"
+                    className="w-4 h-4 text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -97,8 +99,8 @@ export default function Home() {
               </div>
 
               {/* Core Technologies */}
-              <div className="mt-8 pt-6 border-t border-zinc-800/50">
-                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-100 uppercase">
+              <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800/50">
+                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-800 dark:text-zinc-100 uppercase transition-colors">
                   Languages & Core
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -114,7 +116,7 @@ export default function Home() {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 text-xs font-medium bg-zinc-900/80 border border-zinc-800 hover:border-zinc-600 rounded-md text-zinc-300 transition-colors cursor-default"
+                      className="px-3 py-1.5 text-xs font-medium bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 text-zinc-700 dark:text-zinc-300 transition-colors cursor-default"
                     >
                       {tech}
                     </span>
@@ -122,16 +124,16 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Tools & Design (ADDED FROM SKETCH) */}
-              <div className="mt-6 pt-6 border-t border-zinc-800/50">
-                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-100 uppercase">
+              {/* Tools & Design */}
+              <div className="mt-6 pt-6 border-t border-zinc-200 dark:border-zinc-800/50">
+                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-800 dark:text-zinc-100 uppercase transition-colors">
                   Tools / Design
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {["Figma", "Git / GitHub", "Cursor"].map((tool) => (
                     <span
                       key={tool}
-                      className="px-3 py-1.5 text-xs font-medium bg-zinc-900/80 border border-zinc-800 hover:border-zinc-600 rounded-md text-zinc-300 transition-colors cursor-default"
+                      className="px-3 py-1.5 text-xs font-medium bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-300 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 text-zinc-700 dark:text-zinc-300 transition-colors cursor-default"
                     >
                       {tool}
                     </span>
@@ -140,12 +142,12 @@ export default function Home() {
               </div>
 
               {/* Education & Languages */}
-              <div className="mt-6 pt-6 border-t border-zinc-800/50 hidden md:block">
-                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-100 uppercase">
+              <div className="mt-6 pt-6 border-t border-zinc-200 dark:border-zinc-800/50 hidden md:block">
+                <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-800 dark:text-zinc-100 uppercase transition-colors">
                   Education
                 </h3>
                 <div className="mb-4 group cursor-default">
-                  <p className="text-sm font-medium text-zinc-200 group-hover:text-white transition-colors">
+                  <p className="text-sm font-medium text-zinc-700 dark:text-zinc-200 group-hover:text-zinc-950 dark:group-hover:text-white transition-colors">
                     Web Design & Coding
                   </p>
                   <p className="text-xs text-zinc-500 mt-1">
@@ -153,19 +155,23 @@ export default function Home() {
                   </p>
                 </div>
 
-                <h3 className="text-xs font-semibold mb-3 mt-6 tracking-widest text-zinc-100 uppercase">
+                <h3 className="text-xs font-semibold mb-3 mt-6 tracking-widest text-zinc-800 dark:text-zinc-100 uppercase transition-colors">
                   Languages
                 </h3>
-                <div className="flex flex-col gap-2 text-sm text-zinc-400">
+                <div className="flex flex-col gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium text-zinc-300">English</span>
-                    <span className="text-xs bg-zinc-800 px-2 py-1 rounded text-zinc-400">
+                    <span className="font-medium text-zinc-700 dark:text-zinc-300 transition-colors">
+                      English
+                    </span>
+                    <span className="text-xs bg-zinc-200 dark:bg-zinc-800 px-2 py-1 rounded text-zinc-600 dark:text-zinc-400 transition-colors">
                       Proficient
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="font-medium text-zinc-300">Turkish</span>
-                    <span className="text-xs bg-zinc-800 px-2 py-1 rounded text-zinc-400">
+                    <span className="font-medium text-zinc-700 dark:text-zinc-300 transition-colors">
+                      Turkish
+                    </span>
+                    <span className="text-xs bg-zinc-200 dark:bg-zinc-800 px-2 py-1 rounded text-zinc-600 dark:text-zinc-400 transition-colors">
                       Native
                     </span>
                   </div>
@@ -178,12 +184,12 @@ export default function Home() {
         {/* RIGHT COLUMN: Detailed Content (Scrollable) */}
         <main className="w-full md:w-2/3 flex flex-col gap-8">
           {/* Executive Summary Section */}
-          <GlassCard className="group transition-all duration-500 hover:border-zinc-700/50">
-            <h3 className="text-lg font-semibold mb-6 text-zinc-100 tracking-wide flex items-center gap-3">
-              <span className="w-8 h-px bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
+          <GlassCard className="group transition-all duration-500 border-zinc-200 dark:border-zinc-800/50 hover:border-zinc-400 dark:hover:border-zinc-700/50">
+            <h3 className="text-lg font-semibold mb-6 text-zinc-800 dark:text-zinc-100 tracking-wide flex items-center gap-3 transition-colors">
+              <span className="w-8 h-px bg-zinc-400 dark:bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
               SUMMARY
             </h3>
-            <div className="flex flex-col gap-4 text-sm text-zinc-400 leading-relaxed font-light text-justify">
+            <div className="flex flex-col gap-4 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light text-justify transition-colors">
               <p>
                 I am a Full-Stack Developer focused on building scalable,
                 high-performance web applications. I bridge the gap between
@@ -210,17 +216,17 @@ export default function Home() {
 
           {/* Projects Section */}
           <GlassCard className="group">
-            <h3 className="text-lg font-semibold mb-6 text-zinc-100 tracking-wide flex items-center gap-3">
-              <span className="w-8 h-px bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
+            <h3 className="text-lg font-semibold mb-6 text-zinc-800 dark:text-zinc-100 tracking-wide flex items-center gap-3 transition-colors">
+              <span className="w-8 h-px bg-zinc-400 dark:bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
               FEATURED PROJECTS
             </h3>
 
             <div className="flex flex-col gap-6">
               {/* Project 1 */}
-              <div className="relative p-6 rounded-xl border border-zinc-800/50 bg-zinc-900/30 hover:bg-zinc-800/40 transition-all duration-300 hover:shadow-lg hover:border-zinc-700 group/card">
+              <div className="relative p-6 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/50 dark:bg-zinc-900/30 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-all duration-300 hover:shadow-lg hover:border-zinc-400 dark:hover:border-zinc-700 group/card">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h4 className="text-base font-semibold text-zinc-100 group-hover/card:text-white transition-colors">
+                    <h4 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 group-hover/card:text-zinc-950 group-hover/card:dark:text-white transition-colors">
                       <Link
                         href="/projects/e-commerce-project"
                         className="before:absolute before:inset-0 before:z-10"
@@ -232,12 +238,12 @@ export default function Home() {
                       Backend Architecture
                     </p>
                   </div>
-                  <div className="flex gap-3 text-zinc-500 relative z-20">
+                  <div className="flex gap-3 text-zinc-400 dark:text-zinc-500 relative z-20">
                     <a
                       href="https://github.com/BerkeKaracan/E-CommerceProject"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-white transition-colors"
+                      className="hover:text-zinc-900 dark:hover:text-white transition-colors"
                       title="GitHub Repository"
                     >
                       <svg
@@ -254,26 +260,26 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none transition-colors">
                   A feature-rich, high-performance Full-Stack modern e-commerce
                   platform built to demonstrate advanced web development, secure
                   backend architecture, and perfect web vitals.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-5 relative z-20">
-                  <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
+                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
                     FastAPI
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
+                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
                     PostgreSQL
                   </span>
                 </div>
               </div>
 
               {/* Project 2 */}
-              <div className="relative p-6 rounded-xl border border-zinc-800/50 bg-zinc-900/30 hover:bg-zinc-800/40 transition-all duration-300 hover:shadow-lg hover:border-zinc-700 group/card">
+              <div className="relative p-6 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/50 dark:bg-zinc-900/30 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-all duration-300 hover:shadow-lg hover:border-zinc-400 dark:hover:border-zinc-700 group/card">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h4 className="text-base font-semibold text-zinc-100 group-hover/card:text-white transition-colors">
+                    <h4 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 group-hover/card:text-zinc-950 group-hover/card:dark:text-white transition-colors">
                       <Link
                         href="/projects/dev-connect-platform"
                         className="before:absolute before:inset-0 before:z-10"
@@ -285,12 +291,12 @@ export default function Home() {
                       Full Stack Application
                     </p>
                   </div>
-                  <div className="flex gap-3 text-zinc-500 relative z-20">
+                  <div className="flex gap-3 text-zinc-400 dark:text-zinc-500 relative z-20">
                     <a
                       href="https://github.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-white transition-colors"
+                      className="hover:text-zinc-900 dark:hover:text-white transition-colors"
                       title="GitHub Repository"
                     >
                       <svg
@@ -307,16 +313,16 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <p className="text-sm text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none transition-colors">
                   Designed and developed a real-time collaboration platform for
                   developers. Built a responsive, accessible UI using Next.js
                   and Tailwind CSS. The backend utilizes FastAPI.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-5 relative z-20">
-                  <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
+                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
                     Next.js
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 bg-zinc-950/50 px-2 py-1 rounded">
+                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
                     Tailwind CSS
                   </span>
                 </div>
@@ -325,18 +331,18 @@ export default function Home() {
           </GlassCard>
 
           {/* CERTIFICATIONS SECTION (ADDED FROM SKETCH) */}
-          <GlassCard className="group transition-all duration-500 hover:border-zinc-700/50">
-            <h3 className="text-lg font-semibold mb-6 text-zinc-100 tracking-wide flex items-center gap-3">
-              <span className="w-8 h-px bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
+          <GlassCard className="group">
+            <h3 className="text-lg font-semibold mb-6 text-zinc-800 dark:text-zinc-100 tracking-wide flex items-center gap-3 transition-colors">
+              <span className="w-8 h-px bg-zinc-400 dark:bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
               CERTIFICATIONS
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl border border-zinc-800/50 bg-zinc-900/20 hover:bg-zinc-800/40 transition-colors">
+              <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/30 dark:bg-zinc-900/20 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-colors">
                 <a
                   href="/Software_Development_Tools_Certificate.pdf"
                   target="_blank"
                 >
-                  <p className="text-sm font-semibold text-zinc-200">
+                  <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 hover:text-zinc-950 dark:hover:text-white transition-colors">
                     Software Development Tools
                   </p>
                   <p className="text-[11px] text-zinc-500 uppercase mt-1 tracking-wider font-mono">
@@ -344,8 +350,8 @@ export default function Home() {
                   </p>
                 </a>
               </div>
-              <div className="p-4 rounded-xl border border-zinc-800/50 bg-zinc-900/20 hover:bg-zinc-800/40 transition-colors">
-                <p className="text-sm font-semibold text-zinc-200">
+              <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/30 dark:bg-zinc-900/20 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-colors">
+                <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 transition-colors">
                   Advanced React Patterns - Test -
                 </p>
                 <p className="text-[11px] text-zinc-500 uppercase mt-1 tracking-wider font-mono">
