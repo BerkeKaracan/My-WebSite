@@ -278,7 +278,7 @@ export default function Home() {
                         href="/projects/dev-connect-platform"
                         className="before:absolute before:inset-0 before:z-10"
                       >
-                        DevConnect Platform
+                        DevConnect Platform - Test -
                       </Link>
                     </h4>
                     <p className="text-xs text-zinc-500 mt-1 uppercase tracking-wider font-medium">
@@ -346,7 +346,7 @@ export default function Home() {
               </div>
               <div className="p-4 rounded-xl border border-zinc-800/50 bg-zinc-900/20 hover:bg-zinc-800/40 transition-colors">
                 <p className="text-sm font-semibold text-zinc-200">
-                  Advanced React Patterns
+                  Advanced React Patterns - Test -
                 </p>
                 <p className="text-[11px] text-zinc-500 uppercase mt-1 tracking-wider font-mono">
                   Frontend Masters • 2023
