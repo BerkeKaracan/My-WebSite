@@ -1,3 +1,4 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
 /* If we need custom colors for our glass theme later, we will add them here using @theme */
