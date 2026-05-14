@@ -98,6 +98,30 @@ export default function Home() {
                 </a>
               </div>
 
+              <div className="mt-6 flex">
+                <a
+                  href="/Berke_Karacan_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-2.5 bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 text-sm font-semibold rounded-xl hover:bg-zinc-800 dark:hover:bg-white transition-all duration-300 shadow-md hover:shadow-lg active:scale-95"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                    />
+                  </svg>
+                  Download CV
+                </a>
+              </div>
+
               {/* Core Technologies */}
               <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800/50">
                 <h3 className="text-xs font-semibold mb-4 tracking-widest text-zinc-800 dark:text-zinc-100 uppercase transition-colors">
