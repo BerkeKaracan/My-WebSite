@@ -2,7 +2,7 @@
 
 > A modern, highly performant, and SEO-optimized portfolio website built to showcase my projects, skills, and professional journey as a Full Stack Developer.
 
-![Portfolio Preview](/profile.jpg)
+![Portfolio Preview](public/profile/my-portfolio.png)
 
 ## 🚀 Overview
 
