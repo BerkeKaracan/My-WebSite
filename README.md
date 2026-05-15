@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Berke Karacan | Full Stack Developer Portfolio
 
-## Getting Started
+> A modern, highly performant, and SEO-optimized portfolio website built to showcase my projects, skills, and professional journey as a Full Stack Developer.
 
-First, run the development server:
+![Portfolio Preview](/profile.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This portfolio is architected with modern web technologies, focusing on absolute performance, perfect Web Vitals, and seamless user experience. It features a complete dark/light theme integration with glassmorphism design principles, secure metadata handling, and real-time analytics.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Live Site:** [https://berkekaracan-portfolio.vercel.app/](https://berkekaracan-portfolio.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS v4
+- **Theming:** next-themes (Class-based dark mode)
+- **Fonts:** next/font (Geist & Geist Mono)
+- **Analytics & Performance:** Vercel Analytics & Speed Insights
+- **Deployment:** Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Flawless Theme Switching:** Fully integrated Dark/Light mode utilizing next-themes and Tailwind v4's explicit `dark:` variants.
+- **Glassmorphism UI:** Custom-built GlassCard components offering a premium aesthetic in both light and dark environments.
+- **Advanced SEO & Metadata:** Dynamic OpenGraph cards, proper semantic HTML, and JSON-LD Schema Markup.
+- **Hydration Safe:** Explicitly handles Next.js SSR and Client mismatches.
+- **Force Dynamic Rendering:** Configured to avoid build conflicts with backend services.
+- **Downloadable CV:** Direct access to a professional resume via a styled action button.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 Getting Started
 
-## Deploy on Vercel
+To run this project locally:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   git clone https://github.com/BerkeKaracan/My-WebSite.git
+
+2. **Install dependencies:**
+
+   npm install
+
+3. **Run the development server:**
+
+   npm run dev
+
+## 🤝 Contact
+
+- **Email:** berkekaracan1113@gmail.com
+- **GitHub:** [github.com/BerkeKaracan](https://github.com/BerkeKaracan)
