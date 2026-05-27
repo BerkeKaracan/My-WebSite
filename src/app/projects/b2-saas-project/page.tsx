@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GlassCard from "@/components/GlassCard";
 
-export default function DevConnectProject() {
+export default function B2BSaaSProject() {
   return (
     <main className="min-h-screen p-6 md:p-12 lg:p-24 bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 font-sans transition-colors duration-300">
       <div className="max-w-5xl mx-auto flex flex-col gap-10">
@@ -49,7 +49,7 @@ export default function DevConnectProject() {
         </div>
 
         <GlassCard className="overflow-hidden p-2 md:p-3">
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
             <Image
               src="/b2b-saas-preview.png"
               alt="B2B SaaS Canvas Workspace Mockup"
@@ -180,7 +180,7 @@ export default function DevConnectProject() {
                 ].map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-2 text-sm font-semibold text-zinc-700 dark:text-zinc-300 bg-zinc-200/80 dark:bg-zinc-800/80 rounded-xl"
+                    className="px-3 py-2 text-sm font-semibold text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl shadow-sm"
                   >
                     {tech}
                   </span>
@@ -200,7 +200,7 @@ export default function DevConnectProject() {
                 href="https://github.com/BerkeKaracan/b2b-saas-dynamic"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-zinc-900 dark:bg-white text-zinc-50 dark:text-zinc-900 text-sm font-bold rounded-xl hover:scale-105 hover:shadow-lg transition-all duration-300"
+                className="flex items-center justify-center gap-2 w-full px-4 py-3.5 bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-100 dark:hover:bg-zinc-200 dark:text-zinc-900 text-sm font-bold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 active:scale-95"
               >
                 <svg
                   className="w-5 h-5"
