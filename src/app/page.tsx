@@ -246,32 +246,40 @@ export default function Home() {
             </h3>
 
             <div className="flex flex-col gap-6">
-              {/* Project 1 */}
-              <div className="relative p-6 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/50 dark:bg-zinc-900/30 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-all duration-300 hover:shadow-lg hover:border-zinc-400 dark:hover:border-zinc-700 group/card">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h4 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 group-hover/card:text-zinc-950 group-hover/card:dark:text-white transition-colors">
-                      <Link
-                        href="/projects/e-commerce-project"
-                        className="before:absolute before:inset-0 before:z-10"
-                      >
-                        E-Commerce Project (MARKET)
-                      </Link>
-                    </h4>
-                    <p className="text-xs text-zinc-500 mt-1 uppercase tracking-wider font-medium">
-                      Backend Architecture
-                    </p>
+              <div className="flex flex-col xl:flex-row gap-6 items-center bg-zinc-100 dark:bg-zinc-900/30 p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/50 transition-all hover:shadow-xl group">
+                <div className="w-full xl:w-1/2 rounded-2xl overflow-hidden relative border border-zinc-200 dark:border-zinc-800">
+                  <Image
+                    src="/ecommerce-mockup.png"
+                    alt="Premium Market E-Commerce"
+                    width={800}
+                    height={600}
+                    className="object-cover w-full h-[250px] transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                <div className="w-full xl:w-1/2 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <span className="px-3 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 rounded-full">
+                      E-Commerce
+                    </span>
+                    <span className="px-3 py-1 text-xs font-semibold bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 rounded-full">
+                      Full-Stack
+                    </span>
                   </div>
-                  <div className="flex gap-3 text-zinc-400 dark:text-zinc-500 relative z-20">
+
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+                      Premium Market
+                    </h3>
                     <a
                       href="https://github.com/BerkeKaracan/E-CommerceProject"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-zinc-900 dark:hover:text-white transition-colors"
+                      className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
                       title="GitHub Repository"
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -283,78 +291,104 @@ export default function Home() {
                       </svg>
                     </a>
                   </div>
-                </div>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none transition-colors">
-                  A feature-rich, high-performance Full-Stack modern e-commerce
-                  platform built to demonstrate advanced web development, secure
-                  backend architecture, and perfect web vitals.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-5 relative z-20">
-                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
-                    FastAPI
-                  </span>
-                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
-                    PostgreSQL
-                  </span>
+
+                  <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
+                    A feature-rich, high-performance Full-Stack modern
+                    e-commerce platform built to demonstrate advanced web
+                    development, secure backend architecture, and perfect web
+                    vitals.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {["Next.js", "FastAPI", "PostgreSQL", "Tailwind"].map(
+                      (tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-xs font-medium text-zinc-600 dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 rounded-lg"
+                        >
+                          {tech}
+                        </span>
+                      ),
+                    )}
+                  </div>
+
+                  <div className="flex gap-4 mt-4">
+                    <Link
+                      href="/projects/e-commerce-project"
+                      className="flex items-center gap-2 px-5 py-2.5 bg-zinc-900 dark:bg-white text-zinc-50 dark:text-zinc-900 text-sm font-semibold rounded-xl hover:scale-105 transition-transform duration-300"
+                    >
+                      View Details
+                    </Link>
+                  </div>
                 </div>
               </div>
 
-              {/* Project 2 */}
-              <div className="relative p-6 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/50 dark:bg-zinc-900/30 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-all duration-300 hover:shadow-lg hover:border-zinc-400 dark:hover:border-zinc-700 group/card">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h4 className="text-base font-semibold text-zinc-800 dark:text-zinc-100 group-hover/card:text-zinc-950 group-hover/card:dark:text-white transition-colors">
-                      <Link
-                        href="/projects/dev-connect-platform"
-                        className="before:absolute before:inset-0 before:z-10"
-                      >
-                        DevConnect Platform - Test -
-                      </Link>
-                    </h4>
-                    <p className="text-xs text-zinc-500 mt-1 uppercase tracking-wider font-medium">
-                      Full Stack Application
-                    </p>
-                  </div>
-                  <div className="flex gap-3 text-zinc-400 dark:text-zinc-500 relative z-20">
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                      title="GitHub Repository"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
+              {/* Project 2: B2B SaaS */}
+              <div className="flex flex-col xl:flex-row gap-6 items-center bg-zinc-100 dark:bg-zinc-900/30 p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/50 transition-all hover:shadow-xl group">
+                <div className="w-full xl:w-1/2 rounded-2xl overflow-hidden relative border border-zinc-200 dark:border-zinc-800">
+                  <Image
+                    src="/b2b-saas-preview.png"
+                    alt="B2B SaaS Canvas Workspace"
+                    width={800}
+                    height={600}
+                    className="object-cover w-full h-[250px] transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 right-4 bg-zinc-900/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full border border-zinc-700">
+                    🚧 Work in Progress
                   </div>
                 </div>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed font-light relative z-20 pointer-events-none transition-colors">
-                  Designed and developed a real-time collaboration platform for
-                  developers. Built a responsive, accessible UI using Next.js
-                  and Tailwind CSS. The backend utilizes FastAPI.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-5 relative z-20">
-                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
-                    Next.js
-                  </span>
-                  <span className="text-xs font-mono text-zinc-600 dark:text-zinc-500 bg-zinc-200/50 dark:bg-zinc-950/50 px-2 py-1 rounded transition-colors">
-                    Tailwind CSS
-                  </span>
+
+                <div className="w-full xl:w-1/2 flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <span className="px-3 py-1 text-xs font-semibold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 rounded-full">
+                      B2B SaaS
+                    </span>
+                    <span className="px-3 py-1 text-xs font-semibold bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 rounded-full">
+                      Full-Stack
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+                    Dynamic Canvas Workspace
+                  </h3>
+
+                  <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
+                    A comprehensive, multi-tenant B2B platform featuring a
+                    highly interactive, node-based canvas. Users can dynamically
+                    render forms, kanban boards, and timelines.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {[
+                      "Next.js",
+                      "TypeScript",
+                      "FastAPI",
+                      "Zustand",
+                      "Tailwind",
+                    ].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs font-medium text-zinc-600 dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 rounded-lg"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-4 mt-4">
+                    <Link
+                      href="/projects/dev-connect-platform"
+                      className="flex items-center gap-2 px-5 py-2.5 bg-zinc-900 dark:bg-white text-zinc-50 dark:text-zinc-900 text-sm font-semibold rounded-xl hover:scale-105 transition-transform duration-300"
+                    >
+                      View Details
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </GlassCard>
 
-          {/* CERTIFICATIONS SECTION (ADDED FROM SKETCH) */}
+          {/* CERTIFICATIONS SECTION */}
           <GlassCard className="group">
             <h3 className="text-lg font-semibold mb-6 text-zinc-800 dark:text-zinc-100 tracking-wide flex items-center gap-3 transition-colors">
               <span className="w-8 h-px bg-zinc-400 dark:bg-zinc-600 group-hover:w-12 transition-all duration-300"></span>
