@@ -387,14 +387,6 @@ export default function Home() {
                   </p>
                 </a>
               </div>
-              <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800/50 bg-zinc-100/30 dark:bg-zinc-900/20 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/40 transition-colors">
-                <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 transition-colors">
-                  Advanced React Patterns - Test -
-                </p>
-                <p className="text-[11px] text-zinc-500 uppercase mt-1 tracking-wider font-mono">
-                  Frontend Masters • 2023
-                </p>
-              </div>
             </div>
           </GlassCard>
         </main>
