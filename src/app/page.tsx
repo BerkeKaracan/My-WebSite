@@ -246,7 +246,8 @@ export default function Home() {
             </h3>
 
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col xl:flex-row gap-6 items-center bg-zinc-100 dark:bg-zinc-900/30 p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/50 transition-all hover:shadow-xl group">
+              {/* Project 1: E-Commerce */}
+              <div className="flex flex-col xl:flex-row gap-6 items-center bg-zinc-100 dark:bg-zinc-900/30 p-4 md:p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/50 transition-all hover:shadow-xl group">
                 <div className="w-full xl:w-1/2 rounded-2xl overflow-hidden relative border border-zinc-200 dark:border-zinc-800">
                   <Image
                     src="/ecommerce-mockup.png"
@@ -303,7 +304,7 @@ export default function Home() {
               </div>
 
               {/* Project 2: B2B SaaS */}
-              <div className="flex flex-col xl:flex-row gap-6 items-center bg-zinc-100 dark:bg-zinc-900/30 p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/50 transition-all hover:shadow-xl group">
+              <div className="flex flex-col xl:flex-row gap-6 items-center bg-zinc-100 dark:bg-zinc-900/30 p-4 md:p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800/50 transition-all hover:shadow-xl group">
                 <div className="w-full xl:w-1/2 rounded-2xl overflow-hidden relative border border-zinc-200 dark:border-zinc-800">
                   <Image
                     src="/b2b-saas-preview.png"
