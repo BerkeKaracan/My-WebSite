@@ -1,4 +1,54 @@
 @import "tailwindcss";
 @variant dark (&:where(.dark, .dark *));
 
-/* If we need custom colors for our glass theme later, we will add them here using @theme */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.45s ease-out both;
+}
+
+.animate-fade-up-delayed {
+  animation: fade-up 0.5s ease-out 0.06s both;
+}
+
+/* Neutral square grid — fades out toward the edges */
+.backdrop-squares {
+  background-image:
+    linear-gradient(to right, rgb(113 113 122 / 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(113 113 122 / 0.28) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 40%,
+    #000 0%,
+    #000 35%,
+    transparent 78%
+  );
+  mask-image: radial-gradient(
+    ellipse 70% 60% at 50% 40%,
+    #000 0%,
+    #000 35%,
+    transparent 78%
+  );
+}
+
+:where(.dark) .backdrop-squares {
+  background-image:
+    linear-gradient(to right, rgb(161 161 170 / 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(161 161 170 / 0.18) 1px, transparent 1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delayed {
+    animation: none;
+  }
+}

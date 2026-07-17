@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import ProjectDetail from "@/components/ProjectDetail";
 import { getProjectBySlug } from "@/data/projects";
 
-export default function B2BSaaSProjectPage() {
-  const project = getProjectBySlug("b2-saas-project");
+export default function FeedbackPortalPage() {
+  const project = getProjectBySlug("feedback-portal");
   if (!project) notFound();
   return <ProjectDetail project={project} />;
 }

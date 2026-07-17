@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -14,15 +14,17 @@ export default function ThemeToggle() {
   }, []);
 
   if (!mounted) return null;
-  if (!mounted) return null;
+
+  const isDark = resolvedTheme === "dark";
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="fixed bottom-8 right-8 p-3 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 shadow-lg border border-zinc-300 dark:border-zinc-700 hover:scale-110 transition-all duration-300 z-50"
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 shadow-lg border border-zinc-300 dark:border-zinc-700 transition-transform duration-200 hover:scale-110 hover:bg-zinc-300 dark:hover:bg-zinc-700"
       aria-label="Toggle Theme"
     >
-      {theme === "dark" ? (
+      {isDark ? (
         <svg
           className="w-5 h-5"
           fill="none"
