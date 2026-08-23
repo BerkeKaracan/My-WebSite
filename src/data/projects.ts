@@ -15,6 +15,7 @@ export type Project = {
   href: string;
   image: string;
   imageAlt: string;
+  gallery?: string[];
   tags: ProjectTag[];
   summary: string;
   overview: string;
@@ -30,8 +31,9 @@ export const projects: Project[] = [
     slug: "b2-saas-project",
     title: "Dynamic Canvas Workspace",
     href: "/projects/b2-saas-project",
-    image: "/b2b-saas-preview.png",
+    image: "/b2b-saas-1.png",
     imageAlt: "B2B SaaS Canvas Workspace",
+    gallery: ["/b2b-saas-2.png", "/b2b-saas-3.png"],
     tags: [
       { label: "B2B SaaS", tone: "blue" },
       { label: "Full-Stack", tone: "purple" },
@@ -77,12 +79,69 @@ export const projects: Project[] = [
       "Explore the source code to see the multi-tenant architecture and dynamic canvas implementation.",
   },
   {
+    slug: "the-vault",
+    title: "The Vault",
+    shortTitle: "The Vault — Reading Terminal",
+    href: "/projects/the-vault",
+    image: "/the-vault-1.png",
+    imageAlt: "The Vault reading and progress terminal",
+    gallery: ["/the-vault-2.png", "/the-vault-3.png"],
+    tags: [
+      { label: "Productivity", tone: "emerald" },
+      { label: "Full-Stack", tone: "purple" },
+    ],
+    summary:
+      "A focus-driven reading and progress terminal — track books, log sessions, organize collections, and measure progress in one personal library.",
+    overview:
+      "The Vault is a reading progress terminal built with Next.js, TypeScript, and Supabase. Users discover books via the Google Books API, add materials to their library, log reading sessions, take notes, and shelve items into custom collections. OAuth sign-in, row-level security, and a clean dark/light interface keep the experience fast and personal.",
+    features: [
+      {
+        title: "Book Discovery & Library",
+        description:
+          "Search and import volumes from Google Books, with rich metadata — descriptions, publishers, and categories.",
+      },
+      {
+        title: "Progress Tracking",
+        description:
+          "Log page progress, reading sessions, and corrections so your stats stay accurate over time.",
+      },
+      {
+        title: "Collections & Notes",
+        description:
+          "Organize materials into custom shelves, attach tags, and keep notes tied to what you're reading.",
+      },
+      {
+        title: "OAuth & Profiles",
+        description:
+          "Sign in with Google or GitHub; user profiles sync display names from OAuth metadata automatically.",
+      },
+      {
+        title: "Supabase + RLS",
+        description:
+          "PostgreSQL-backed schema with row-level security — each user's library and progress stay isolated.",
+      },
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Google Books API",
+    ],
+    liveUrl: "https://the-value.vercel.app/",
+    repoUrl: "https://github.com/BerkeKaracan/the-vault",
+    repoBlurb:
+      "Explore the reading terminal, progress model, collections system, and Supabase auth setup.",
+  },
+  {
     slug: "feedback-portal",
     title: "Feedback Portal",
     shortTitle: "Multi-Tenant Feedback Portal",
     href: "/projects/feedback-portal",
-    image: "/feedback-preview.png",
+    image: "/feedback-1.png",
     imageAlt: "Feedback Portal boards and admin dashboard",
+    gallery: ["/feedback-2.png", "/feedback-3.png"],
     tags: [
       { label: "SaaS", tone: "cyan" },
       { label: "Full-Stack", tone: "purple" },
@@ -137,8 +196,9 @@ export const projects: Project[] = [
     title: "Premium Market",
     shortTitle: "E-Commerce Workspace",
     href: "/projects/e-commerce-project",
-    image: "/ecommerce-mockup.png",
+    image: "/e-commerce-1.png",
     imageAlt: "Premium Market E-Commerce",
+    gallery: ["/e-commerce-2.png", "/e-commerce-3.png"],
     tags: [
       { label: "E-Commerce", tone: "emerald" },
       { label: "Full-Stack", tone: "purple" },

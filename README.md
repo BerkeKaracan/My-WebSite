@@ -47,4 +47,5 @@ To run this project locally:
 ## 🤝 Contact
 
 - **Email:** berkekaracan1113@gmail.com
-- **GitHub:** [github.com/BerkeKaracan](https://github.com/BerkeKaracan)
+
+-**Linkedin:** www.linkedin.com/in/berke-karacan

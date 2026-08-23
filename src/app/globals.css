@@ -1,10 +1,15 @@
 @import "tailwindcss";
 @variant dark (&:where(.dark, .dark *));
 
-@keyframes fade-up {
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -12,43 +17,53 @@
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.45s ease-out both;
+.animate-rise {
+  animation: rise 0.5s ease-out both;
 }
 
-.animate-fade-up-delayed {
-  animation: fade-up 0.5s ease-out 0.06s both;
+.animate-rise-delay {
+  animation: rise 0.55s ease-out 0.08s both;
 }
 
-/* Neutral square grid — fades out toward the edges */
-.backdrop-squares {
+.site-grid {
   background-image:
-    linear-gradient(to right, rgb(113 113 122 / 0.28) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(113 113 122 / 0.28) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(to right, rgb(161 161 170 / 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(161 161 170 / 0.14) 1px, transparent 1px);
+  background-size: 56px 56px;
   -webkit-mask-image: radial-gradient(
-    ellipse 70% 60% at 50% 40%,
+    ellipse 85% 70% at 50% 0%,
     #000 0%,
-    #000 35%,
-    transparent 78%
+    #000 40%,
+    transparent 100%
   );
   mask-image: radial-gradient(
-    ellipse 70% 60% at 50% 40%,
+    ellipse 85% 70% at 50% 0%,
     #000 0%,
-    #000 35%,
-    transparent 78%
+    #000 40%,
+    transparent 100%
   );
 }
 
-:where(.dark) .backdrop-squares {
+:where(.dark) .site-grid {
   background-image:
-    linear-gradient(to right, rgb(161 161 170 / 0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(161 161 170 / 0.18) 1px, transparent 1px);
+    linear-gradient(to right, rgb(113 113 122 / 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(113 113 122 / 0.12) 1px, transparent 1px);
+}
+
+.section-index {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: rgb(161 161 170);
+}
+
+:where(.dark) .section-index {
+  color: rgb(113 113 122);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-up,
-  .animate-fade-up-delayed {
+  .animate-rise,
+  .animate-rise-delay {
     animation: none;
   }
 }
